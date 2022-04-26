@@ -1,9 +1,10 @@
-package com.hy.day3;
+package hy3.day3;
 
 public class Test {
     public static void main(String[] args) {
         int n = 5;
-        int answer = Solution.countVowelPermutation(n);
+        Solution solution = new Solution();
+        int answer = solution.countVowelPermutation(n);
         System.out.println(answer);
     }
 }

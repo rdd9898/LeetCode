@@ -1,4 +1,4 @@
-package com.hy.day3;
+package hy3.day3;
 
 //1220.统计元音字母序列的数目
 
@@ -13,7 +13,7 @@ package com.hy.day3;
 //由于答案可能会很大，所以请你返回 模 10^9 + 7 之后的结果。
 
 public class Solution {
-    public static int countVowelPermutation(int n) {
+    public int countVowelPermutation(int n) {
         long mod = 1000000007;
         long[] dp = new long[5];
         long[] ndp = new long[5];

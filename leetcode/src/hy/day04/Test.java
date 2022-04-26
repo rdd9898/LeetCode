@@ -4,7 +4,8 @@ public class Test {
     public static void main(String[] args) {
         int[][] grid =  {{1, 2, 1, 2, 1, 2}, {2, 2, 2, 2, 1, 2}, {1, 2, 2, 2, 1, 2}};
         int[][] gridColor;
-        gridColor = Solution.colorBorder(grid, 1, 3, 1);
+        Solution solution = new Solution();
+        gridColor = solution.colorBorder(grid, 1, 3, 1);
         int m = gridColor.length;
         int n = gridColor[0].length;
         for (int i=0; i<m; i++) {

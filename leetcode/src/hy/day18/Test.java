@@ -4,8 +4,8 @@ public class Test {
     public static void main(String[] args) {
         String a = "abcd";
         String b = "cdabcdab";
-
-        int answer = Solution.repeatedStringMatch(a, b);
+        Solution solution = new Solution();
+        int answer = solution.repeatedStringMatch(a, b);
         System.out.println(answer);
     }
 }

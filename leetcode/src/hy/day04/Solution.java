@@ -11,7 +11,7 @@ package hy.day04;
 //第一次自己写出的题 哈哈
 public class Solution {
 
-    public static int[][] colorBorder(int[][] grid, int row, int col, int color) {
+    public int[][] colorBorder(int[][] grid, int row, int col, int color) {
         int color2 = grid[row][col];
         int m = grid.length;
         int n = grid[0].length;
@@ -27,7 +27,7 @@ public class Solution {
 
         return grid;
     }
-    public static void color(int[][] grid, int[][] gridCopy, int row, int col, int color, int color2, int[][] flag, int m, int n) {
+    public void color(int[][] grid, int[][] gridCopy, int row, int col, int color, int color2, int[][] flag, int m, int n) {
         if (flag[row][col] == 1) {
             return;
         }

@@ -18,7 +18,7 @@ public class GraphTraversal {
     boolean[] visited;
 
     public GraphTraversal(ListGraph listGraph) {
-        this.graph = listGraph;
+        graph = listGraph;
         visited = new boolean[listGraph.graphs.size()];
     }
 

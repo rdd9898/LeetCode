@@ -19,7 +19,7 @@ b和a包含的字符是一致的，此时又分为：
 */
 
 public class Solution {
-    public static int repeatedStringMatch(String a, String b) {
+    public int repeatedStringMatch(String a, String b) {
         int[] ch = new int[26];
         for(char c: a.toCharArray()) {
             ch[c - 'a'] = 1;
@@ -32,7 +32,7 @@ public class Solution {
         }
         int rep = b.length() / a.length();
 
-        StringBuilder sb = new StringBuilder(a.repeat(rep));
+        StringBuilder sb = new StringBuilder(a);
         for (int i = 0; i < 3; i++) {
             if(sb.toString().contains(b)) {
                 return rep + i;
