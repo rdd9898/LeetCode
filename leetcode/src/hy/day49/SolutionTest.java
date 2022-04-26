@@ -1,6 +1,6 @@
 package hy.day49;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 public class SolutionTest {
 
