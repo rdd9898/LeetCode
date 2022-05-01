@@ -9,14 +9,14 @@ package com.hy.day30;
  * @version: $
  */
 public class Solution {
-    public static String tree2str(TreeNode root) {
+    public static String tree2str(com.hy.day30.TreeNode root) {
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append(root.val);
         diGui(root, stringBuffer);
         return stringBuffer.toString();
     }
 
-    private static void diGui(TreeNode root, StringBuffer stringBuffer) {
+    private static void diGui(com.hy.day30.TreeNode root, StringBuffer stringBuffer) {
         stringBuffer.append('(');
         stringBuffer.append(root.left.val);
         diGui(root.left, stringBuffer);
