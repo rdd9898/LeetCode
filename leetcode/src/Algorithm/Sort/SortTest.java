@@ -23,4 +23,17 @@ public class SortTest {
             System.out.println(num);
         }
     }
+
+    @Test
+    public void merge() {
+        int[] array = {1,3,1,4,2,4,5,7,1,2,3,6,1,6,8,6};
+        int p = 4;
+        int q = 7;
+        int r = 11;
+        MergeSort mergeSort = new MergeSort();
+//        mergeSort.merge(array, p, q, r);
+        mergeSort.mergeSort(array, 0, array.length - 1);
+        System.out.println(1);
+    }
+
 }
