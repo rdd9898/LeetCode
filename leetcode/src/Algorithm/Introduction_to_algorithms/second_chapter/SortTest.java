@@ -1,4 +1,4 @@
-package Algorithm.Sort;
+package Algorithm.Introduction_to_algorithms.second_chapter;
 
 import org.junit.Test;
 
@@ -35,5 +35,27 @@ public class SortTest {
         mergeSort.mergeSort(array, 0, array.length - 1);
         System.out.println(1);
     }
+
+    @Test
+    public void bubbleSortTest() {
+
+        int[] array = {1,3,1,4,2,4,5,7,1,2,3,6,1,6,8,6};
+        BubbleSort bubbleSort = new BubbleSort();
+        bubbleSort.bubbleSort(array);
+        for (int i : array) {
+            System.out.println(i);
+        }
+
+    }
+
+    @Test
+    public void countInversionsTest() {
+        int[] array = {2, 3, 8, 6, 1};
+        MergeSort mergeSort = new MergeSort();
+        int ans = mergeSort.countInversions(array, 0, array.length - 1);
+        System.out.println(ans);
+    }
+
+
 
 }

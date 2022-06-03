@@ -1,4 +1,4 @@
-package Algorithm.Sort;
+package Algorithm.Introduction_to_algorithms.second_chapter;
 
 /**
  * @author 胡阳
@@ -56,6 +56,59 @@ public class MergeSort {
                 j++;
             }
         }
+    }
+
+    /**
+     * @Description: 确定数组逆序对的数量（修改归并排序）
+     * @Param: [array, p, r]
+     * @return: int
+     * @Author: HuYang
+     * @Date:2022/6/2 10:47
+     */
+    public int countInversions(int[] array, int p, int r) {
+        if (p < r) {
+            int q = p + (r - p) / 2;
+            int left = countInversions(array, p, q);
+            int right = countInversions(array, q + 1, r);
+            return inversions(array, p, q, r) + left + right;
+        }
+        return 0;
+    }
+
+    /**
+     * @Description: 按升序合并两个排好序的数组，返回排序前的逆序对的数量
+     * @Param: [array, p, q, r] 
+     * @return: int
+     * @Author: HuYang
+     * @Date:2022/6/2 10:49
+     */
+    public int inversions(int[] array, int p, int q, int r) {
+        int n1 = q - p + 1;
+        int n2 = r - q;
+        int[] arrayLeft = new int[n1 + 1];
+        int[] arrayRight = new int[n2 + 1];
+        for (int i = 0; i < n1; i++) {
+            arrayLeft[i] = array[p + i];
+        }
+        for (int j = 0; j < n2; j++) {
+            arrayRight[j] = array[q + j + 1];
+        }
+        arrayLeft[n1] = Integer.MAX_VALUE;
+        arrayRight[n2] = Integer.MAX_VALUE;
+        int i = 0;
+        int j = 0;
+        int ans = 0;
+        for (int x = p; x <= r; x++) {
+            if (arrayLeft[i] <= arrayRight[j]) {
+                array[x] = arrayLeft[i];
+                i++;
+            } else {
+                ans += n1 - i;
+                array[x] = arrayRight[j];
+                j++;
+            }
+        }
+        return ans;
     }
 
 }
