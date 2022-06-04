@@ -10,7 +10,7 @@ public class SolutionTest {
     public void consecutiveNumbersSum() {
         int n = 5;
         Solution solution = new Solution();
-        int i = solution.consecutiveNumbersSum(5);
+        int i = solution.consecutiveNumbersSum(n);
         System.out.println(i);
     }
 }
