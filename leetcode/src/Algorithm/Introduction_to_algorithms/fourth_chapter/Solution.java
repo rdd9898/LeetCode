@@ -104,4 +104,24 @@ public class Solution {
         return new int[]{low, high, maxSum};
     }
 
+    /**
+    * @Description: 矩阵乘法
+    * @Param: [matrix1, matrix2]
+    * @return: int[][]
+    * @Author: HuYang
+    * @Date: 2022/6/4
+    */
+    public int[][] squareMatrixMultiply(int[][] matrix1, int[][] matrix2) {
+        int n = matrix1.length;
+        int[][] returnMatrix = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int k = 0; k < n; k++) {
+                    returnMatrix[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+        return returnMatrix;
+    }
+
 }
