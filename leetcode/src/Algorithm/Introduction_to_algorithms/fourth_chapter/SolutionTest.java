@@ -18,4 +18,20 @@ public class SolutionTest {
             System.out.println(answer);
         }
     }
+
+    @Test
+    public void testSquareMatrixMultiply() {
+        int[][] matrix1 = new int[][]{{1, 2, 3}, {1, 2, 3}, {1, 2, 3}};
+        int[][] matrix2 = new int[][]{{1, 2, 3}, {1, 2, 3}, {1, 2, 3}};
+        Solution solution = new Solution();
+        int[][] matrixMultiply = solution.squareMatrixMultiply(matrix1, matrix2);
+        for (int[] ints : matrixMultiply) {
+            for (int i : ints) {
+                System.out.print(i);
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
 }
