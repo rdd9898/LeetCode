@@ -12,6 +12,7 @@ public class SolutionTest {
         Heap heap = new Heap(arr, arr.length);
         Solution solution = new Solution();
         solution.buildMaxHeap(heap);
-        solution.maxHeapIFYByWhile(heap, 2);
+        solution.heapExtractMax(heap);
+        solution.maxHeapInsert(heap, 100);
     }
 }
