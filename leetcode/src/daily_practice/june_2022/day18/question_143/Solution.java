@@ -1,0 +1,55 @@
+package daily_practice.june_2022.day18.question_143;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 利用数组存储节点
+ * @program: LeetCode
+ * @description: 143.重排数组
+ * @author: Mr.Hu
+ * @create: 2022-06-18 14:50
+ **/
+public class Solution {
+
+    public void reorderList(ListNode head) {
+        if (head == null) {
+            return;
+        }
+        List<ListNode> list = new ArrayList<ListNode>();
+        ListNode node = head;
+        while (node != null) {
+            list.add(node);
+            node = node.next;
+        }
+        int i = 0, j = list.size() - 1;
+        while (i < j) {
+            list.get(i).next = list.get(j);
+            i++;
+            if (i == j) {
+                break;
+            }
+            list.get(j).next = list.get(i);
+            j--;
+        }
+        list.get(i).next = null;
+    }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
+}
