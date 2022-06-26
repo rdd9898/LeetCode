@@ -1,4 +1,4 @@
-package daily_practice.june_2022.day25_question_199;
+package daily_practice.june_2022.day25.question_199;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

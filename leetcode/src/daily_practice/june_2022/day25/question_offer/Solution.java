@@ -1,4 +1,4 @@
-package daily_practice.june_2022.day25_question_offer;
+package daily_practice.june_2022.day25.question_offer;
 
 import java.util.Arrays;
 
