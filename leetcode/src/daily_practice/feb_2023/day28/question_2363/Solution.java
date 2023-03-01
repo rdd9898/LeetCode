@@ -1,4 +1,4 @@
-package daily_practice.feb_2022.day28.question_2363;
+package daily_practice.feb_2023.day28.question_2363;
 
 import java.util.*;
 

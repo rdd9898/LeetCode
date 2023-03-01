@@ -1,8 +1,6 @@
-package daily_practice.feb_2022.day20.question_2553;
+package daily_practice.feb_2023.day20.question_2553;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class SolutionTest {
 

@@ -1,4 +1,4 @@
-package daily_practice.feb_2022.day20.question_2553;
+package daily_practice.feb_2023.day20.question_2553;
 
 import java.util.ArrayList;
 
