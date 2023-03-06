@@ -10,9 +10,10 @@ public class SolutionNormal {
 
     public int secondsToRemoveOccurrences(String s) {
         int f = 0, pre0 = 0;
-        for (var i = 0; i < s.length(); i++)
+        for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '0') ++pre0;
-            else if (pre0 > 0) f = Math.max(f + 1, pre0); // 前面有 0 的时候才会移动
+            else if (pre0 > 0) f = Math.max(f + 1, pre0);
+        }// 前面有 0 的时候才会移动
         return f;
     }
 
